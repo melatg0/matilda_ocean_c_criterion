@@ -110,3 +110,23 @@ criterion_gmst_obs <- function() {
     obs_values = adjusted_gmst_data$anomaly_C
   )
 }
+
+#' Screening criterion using observed ocean carbon sink
+#'
+#' @description This is a criterion identifier for screening model runs using
+#' observed ocean carbon sink values.
+#'
+#' @return A criterion identifier using observed ocean carbon sink
+#' @export
+#'
+#' @examples
+#' criterion_ocean_c_sink_obs()
+
+criterion_ocean_c_sink_obs <- function() {
+  new_criterion(
+    var = 'OCEAN_CARBON_SINK',
+    years = observed_data_ocean$year,
+    obs_values = observed_data_ocean$ocean_uptake
+  )
+}
+

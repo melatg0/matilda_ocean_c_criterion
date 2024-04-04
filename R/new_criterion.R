@@ -112,7 +112,6 @@ criterion_gmst_obs <- function() {
 }
 
 #' Screening criterion using observed ocean carbon sink
-#'
 #' @description This is a criterion identifier for screening model runs using
 #' observed ocean carbon sink values from The Global Carbon Project data set.
 #'
@@ -124,8 +123,7 @@ criterion_gmst_obs <- function() {
 #' criterion_ocean_uptake_obs()
 
 criterion_ocean_uptake_obs <- function() {
-  new_criterion(
-    var = OCEAN_UPTAKE(),
+  new_criterion(OCEAN_UPTAKE(),
     years = observed_data_ocean$year,
     obs_values = observed_data_ocean$ocean_uptake
   )

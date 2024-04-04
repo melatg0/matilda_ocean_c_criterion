@@ -116,16 +116,13 @@ criterion_gmst_obs <- function() {
 #' observed ocean carbon sink values from The Global Carbon Project data set.
 #'
 #' @return A criterion identifier using observed ocean carbon sink
-#' #' @note This function uses data from The Global Carbon Project's 2023 Global Carbon Budget. Friedlingstein et al. Global Carbon Budget 2023, Earth Sys. Sci. Data, 15, 5301-5369. It can be accessed here:
-#' \href{https://globalcarbonbudgetdata.org/latest-data.html}
+#' @note This function uses data from The Global Carbon Project's 2023 Global Carbon Budget. Friedlingstein et al. Global Carbon Budget 2023, Earth Sys. Sci. Data, 15, 5301-5369. It can be accessed here:
+#' \href{https://globalcarbonbudgetdata.org/latest-data.html}{https://globalcarbonbudgetdata.org/latest-data.html}
 #'
 #' @examples
 #' criterion_ocean_uptake_obs()
-
 criterion_ocean_uptake_obs <- function() {
   new_criterion(OCEAN_UPTAKE(),
-    years = observed_data_ocean$year,
-    obs_values = observed_data_ocean$ocean_uptake
-  )
+                years = observed_data_ocean$year,
+                obs_values = observed_data_ocean$ocean_uptake)
 }
-
